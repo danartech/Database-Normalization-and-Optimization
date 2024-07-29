@@ -4,6 +4,8 @@
 
 In this project, I reorganized the structure of the database to improve its efficiency and manageability. The initial design stored all data in a single table, which included movies, store locations, and inventory information. This setup made it challenging to update or retrieve specific data and could lead to inconsistencies and errors.
 
+![Original Data](https://github.com/danartech/Database-Normalization-and-Optimization/blob/main/Screenshot%202024-07-28%20002717.png)
+
 ## Actions Taken
 
 1. **Data Segmentation**
@@ -11,6 +13,8 @@ In this project, I reorganized the structure of the database to improve its effi
      - **`inventory`**: Contains inventory data, indicating which movies are available at which stores.
      - **`film`**: Stores details about movies, including titles, descriptions, release years, rental rates, and ratings.
      - **`store`**: Holds information about stores, such as manager names, addresses, cities, and districts.
+    
+![Normalized](https://github.com/danartech/Database-Normalization-and-Optimization/blob/main/Screenshot%202024-07-28%20005319.png)
 
 2. **Establishment of Primary and Foreign Keys**
    - Defined primary keys in each table for unique identification of records.
@@ -60,3 +64,10 @@ The changes involved using SQL commands to create new tables, establish primary 
        store_city VARCHAR(255),
        store_district VARCHAR(255)
    );
+
+## Appendices
+
+- **Inventory Table**: [Inventory Table](https://github.com/danartech/Database-Normalization-and-Optimization/blob/main/inventory%20table.csv)
+- **Film Table**: [Film Table](https://github.com/danartech/Database-Normalization-and-Optimization/blob/main/film%20table.csv)
+- **Store Table**: [Store Table](https://github.com/danartech/Database-Normalization-and-Optimization/blob/main/store%20table.csv)
+- **Non-Normalized Table**: [Non-Normalized Table](https://github.com/danartech/Database-Normalization-and-Optimization/blob/main/inventory_non_normalized_original%20schema%20table.csv)
